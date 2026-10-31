@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ckrdkri0d5t74" path="res://Scenes/player.tscn" id="2_6oosd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq43x"]
-size = Vector2(1199, 113.5)
+size = Vector2(1199, 64.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpy36"]
 size = Vector2(1211, 19)
@@ -27,7 +27,7 @@ position = Vector2(602, 349)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=126719255]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=168154980]
-position = Vector2(602.5, 641.75)
+position = Vector2(602.5, 666.25)
 shape = SubResource("RectangleShape2D_yq43x")
 debug_color = Color(0, 0.6, 0.701961, 0.682353)
 

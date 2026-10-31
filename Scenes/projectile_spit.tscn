@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://6prm4eagtei8"]
+
+[ext_resource type="Texture2D" uid="uid://dy2a7v2j4abw7" path="res://Resources/green_spit.png" id="1_rkcuw"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_yk46i"]
+points = PackedVector2Array(-71.5, -3, -5.5, -7, 59.5, -10, 204.5, -40, 205.5, 41, 139.5, 42, 95.5, 18, -47.5, 15, -75.5, 4)
+
+[node name="Projectile_Spit" type="Node2D" unique_id=2037660431]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1620250038]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=790931929]
+position = Vector2(-63.5, -2)
+shape = SubResource("ConvexPolygonShape2D_yk46i")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1721000240]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("1_rkcuw")
