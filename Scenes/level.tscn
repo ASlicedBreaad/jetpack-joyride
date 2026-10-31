@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://dytqsksctxdh1"]
+[gd_scene format=3 uid="uid://dytqsksctxdh1"]
 
-[ext_resource type="Script" path="res://Scripts/Background/ParallaxBackground.cs" id="1_csbjy"]
+[ext_resource type="Script" uid="uid://dgww77bwrynam" path="res://Scripts/Background/ParallaxBackground.cs" id="1_csbjy"]
 [ext_resource type="Texture2D" uid="uid://db2hsne27105p" path="res://Resources/background2.jpg" id="1_rvyfj"]
 [ext_resource type="PackedScene" uid="uid://ckrdkri0d5t74" path="res://Scenes/player.tscn" id="2_6oosd"]
 
@@ -10,36 +10,32 @@ size = Vector2(1199, 113.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jpy36"]
 size = Vector2(1211, 19)
 
-[node name="Level" type="Node2D"]
+[node name="Level" type="Node2D" unique_id=235382767]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="parallax2dBG" type="Parallax2D" parent="." unique_id=1491546136]
 scroll_offset = Vector2(36.17, 0)
-scroll_ignore_camera_zoom = true
+repeat_size = Vector2(1900, 0)
 script = ExtResource("1_csbjy")
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_offset = Vector2(36.17, 0)
-motion_mirroring = Vector2(1900, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Sprite2D" type="Sprite2D" parent="parallax2dBG" unique_id=1216279327]
 texture = ExtResource("1_rvyfj")
 centered = false
 
-[node name="Player" parent="." instance=ExtResource("2_6oosd")]
+[node name="Player" parent="." unique_id=1549871649 instance=ExtResource("2_6oosd")]
 position = Vector2(602, 349)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=126719255]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=168154980]
 position = Vector2(602.5, 641.75)
 shape = SubResource("RectangleShape2D_yq43x")
 debug_color = Color(0, 0.6, 0.701961, 0.682353)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(600, 351)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2125328267]
+position = Vector2(635, 346)
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=488464429]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1473719499]
 position = Vector2(595.5, -0.5)
 shape = SubResource("RectangleShape2D_jpy36")

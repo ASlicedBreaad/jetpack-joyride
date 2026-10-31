@@ -1,10 +1,30 @@
 using Godot;
+using JetpackJoyride.Scripts.Common;
 using System;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -600.0f;
+	private const float Speed = 300.0f;
+	private const float JumpVelocity = -600.0f;
+
+	private float Acceleration = -500f;
+
+	private float EarthGravity = 0;
+
+	private float AccelerationStep;
+
+	private float NewAcceleration;
+
+	private readonly InputKeyMap IK = InputKeyMap.GetInstance;
+
+
+    public override void _Ready()
+	{
+		EarthGravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle()*3f;
+		AccelerationStep = -EarthGravity*1.2f;
+	}
+
+
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -17,9 +37,12 @@ public partial class Player : CharacterBody2D
 		}
 
 		// Handle Jump.
-		if (Input.IsActionJustPressed("ui_accept") && IsOnFloor())
+		if (Input.IsActionPressed(IK.Jump))
 		{
-			velocity.Y = JumpVelocity;
+			NewAcceleration = (float)(AccelerationStep*delta);
+			velocity.Y += (float)Mathf.Clamp(NewAcceleration,-EarthGravity*delta*2,-EarthGravity*delta);
+
+			GD.Print($"Curent:{NewAcceleration} min:{-EarthGravity*delta*2} max:{-EarthGravity*delta}");
 		}
 
 		// // Get the input direction and handle the movement/deceleration.
