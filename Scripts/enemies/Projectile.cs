@@ -3,27 +3,23 @@ using Godot;
 
 namespace JetpackJoyride.Scripts.enemies;
 
-public partial class Projectile : RigidBody2D
+public partial class Projectile : Enemy
 {
-    private Vector2 _velocityStep = new Vector2();
+	private Vector2 _velocityStep = new Vector2();
+	private Vector2 _newVelocity = new Vector2();
 
-    public override void _EnterTree()
-    {
-        
-    }
+	public Projectile() : base()
+	{
+	}
 
-    public override void _PhysicsProcess(double delta)
-    {
-        
-    }
+	public override void _EnterTree()
+	{
+		
+	}
 
-    public void SetHorVelocityStep(float velocity)
-    {
-        _velocityStep.X = velocity;
-    }
+	public override void _PhysicsProcess(double delta)
+	{
+	}
 
-    public void SetVerVelocityStep(float velocity)
-    {
-        _velocityStep.Y = velocity;
-    }
+
 }

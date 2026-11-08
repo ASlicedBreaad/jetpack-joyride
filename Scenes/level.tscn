@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dytqsksctxdh1"]
 
+[ext_resource type="Script" uid="uid://ssd1koqj5c1o" path="res://Scenes/main.cs" id="1_81xng"]
 [ext_resource type="Script" uid="uid://dgww77bwrynam" path="res://Scripts/Background/ParallaxBackground.cs" id="1_csbjy"]
-[ext_resource type="Texture2D" uid="uid://db2hsne27105p" path="res://Resources/background2.jpg" id="1_rvyfj"]
+[ext_resource type="Texture2D" uid="uid://db2hsne27105p" path="res://Resources/Sprites/background2.jpg" id="1_rvyfj"]
 [ext_resource type="PackedScene" uid="uid://ckrdkri0d5t74" path="res://Scenes/player.tscn" id="2_6oosd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq43x"]
@@ -11,6 +12,7 @@ size = Vector2(1199, 64.5)
 size = Vector2(1211, 19)
 
 [node name="Level" type="Node2D" unique_id=235382767]
+script = ExtResource("1_81xng")
 
 [node name="parallax2dBG" type="Parallax2D" parent="." unique_id=1491546136]
 scroll_offset = Vector2(36.17, 0)

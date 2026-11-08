@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyStats" format=3 uid="uid://blmhur56c6vil"]
+
+[ext_resource type="PackedScene" uid="uid://6prm4eagtei8" path="res://Scenes/projectile_spit.tscn" id="1_6vshp"]
+[ext_resource type="Texture2D" uid="uid://dy2a7v2j4abw7" path="res://Resources/Sprites/green_spit.png" id="2_isamd"]
+[ext_resource type="Script" uid="uid://dgnq7ukgpflhj" path="res://Scripts/enemies/EnemyStats.cs" id="3_mkgn3"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("3_mkgn3")
+Name = "Green Spit"
+Scene = ExtResource("1_6vshp")
+HorSpeed = 320.0
+Texture = ExtResource("2_isamd")
+metadata/_custom_type_script = "uid://dgnq7ukgpflhj"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dy2a7v2j4abw7"
-path="res://.godot/imported/green_spit.png-0b3de7822f55e69e876982a41b9c4e51.ctex"
+uid="uid://l3hrddg63lev"
+path="res://.godot/imported/background.jpg-8c01f9c1b3d48d2f7ef1e0f861a84e76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/green_spit.png"
-dest_files=["res://.godot/imported/green_spit.png-0b3de7822f55e69e876982a41b9c4e51.ctex"]
+source_file="res://Resources/Sprites/background.jpg"
+dest_files=["res://.godot/imported/background.jpg-8c01f9c1b3d48d2f7ef1e0f861a84e76.ctex"]
 
 [params]
 
