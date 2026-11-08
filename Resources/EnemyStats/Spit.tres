@@ -9,6 +9,6 @@ resource_local_to_scene = true
 script = ExtResource("3_mkgn3")
 Name = "Green Spit"
 Scene = ExtResource("1_6vshp")
-HorSpeed = 320.0
+HorSpeed = -600.0
 Texture = ExtResource("2_isamd")
 metadata/_custom_type_script = "uid://dgnq7ukgpflhj"

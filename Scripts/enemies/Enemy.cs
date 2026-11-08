@@ -30,6 +30,9 @@ public abstract partial class Enemy : RigidBody2D
         Sprite = GetNode<Sprite2D>("Sprite2D");
         Sprite.Texture = Stats.Texture;
         Health = Stats.Health;
+        GravityScale = 0.0f;
+        Mass = 1;
+        GetNode<CollisionPolygon2D>("CollisionPolygon2D").Disabled = true;
         OnSpawn();
     }
 
@@ -37,6 +40,7 @@ public abstract partial class Enemy : RigidBody2D
     public virtual void OnSpawn()
     {
         IsOut = false;
+        AddConstantCentralForce(Speed);
     }
 
     public virtual void OnOut()

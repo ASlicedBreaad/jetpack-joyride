@@ -6,7 +6,7 @@
 [node name="Projectile_Spit" type="RigidBody2D" unique_id=1620250038]
 script = ExtResource("1_vhd8k")
 
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=2091530097]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=2091530097]
 position = Vector2(-63.5, -2)
 polygon = PackedVector2Array(-76.5, 2, -70.5, -2, -52.5, 0, -21.5, -5, -2.5, -9, 46.5, -10, 97.5, -12, 206.5, -42, 209.5, -40, 209.5, 25, 194.5, 43, 183.5, 44, 165.5, 42, 144.5, 42, 133.5, 37, 123.5, 27, 81.5, 13, -38.5, 12, -62.5, 12, -73.5, 9)
 
